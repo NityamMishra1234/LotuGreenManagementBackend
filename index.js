@@ -18,7 +18,7 @@ connectDB();
 
 
 app.use(cors({
-  origin: 'https://lotus-green-management-31lb.vercel.app',
+  origin: '*',
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
@@ -38,7 +38,7 @@ app.get('/', (req, res) => {
 });
 
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, () => {
   console.log(`App is running on port: ${PORT}`);
