@@ -23,7 +23,7 @@ const corsOptions = {
     'https://lotus-green-management-git-main-nityam-kumars-projects.vercel.app',  // No trailing slash
     'https://lotus-green-management-r9d40hee9-nityam-kumars-projects.vercel.app',  // No trailing slash
   ],
-  methods: ['GET', 'POST'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 };
 app.use(cors(corsOptions));
