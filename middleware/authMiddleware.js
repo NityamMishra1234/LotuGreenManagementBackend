@@ -28,10 +28,8 @@ export const verifyOwner = (req, res, next) => {
         req.userId = decoded.userId;
         req.role = decoded.role;
         req.ownerId = decoded.userId; // Ensure ownerId is set correctly
-        console.log(req.userId)
-        console.log(req.role)
-        console.log(req.ownerId)
-        // Ensure that the user is an owner (PG owner)
+        
+        // Ensure that the user is an owner (PG owner)  
         if (req.role !== 'owner') {
             return res.status(403).json({ message: 'You are not authorized to perform this action' });
         }

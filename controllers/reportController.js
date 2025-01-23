@@ -25,7 +25,7 @@ export const getOccupancyReport = async (req, res) => {
 };
 
 // @desc    Get financial report
-// @route   GET /api/reports/financial/:ownerId
+// @route   GET /api/reports/financial/:ownerId 
 export const getFinancialReport = async (req, res) => {
     const { ownerId } = req.params;
     try {

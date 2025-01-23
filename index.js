@@ -18,10 +18,16 @@ connectDB();
 
 
 const corsOptions = {
-  origin: ['https://lotus-green-management-31lb.vercel.app', 'https://lotus-green-management-git-main-nityam-kumars-projects.vercel.app/', 'https://lotus-green-management-r9d40hee9-nityam-kumars-projects.vercel.app/'], // Add more domains here
+  origin: [
+    'https://lotus-green-management-31lb.vercel.app',  // No trailing slash
+    'https://lotus-green-management-git-main-nityam-kumars-projects.vercel.app',  // No trailing slash
+    'https://lotus-green-management-r9d40hee9-nityam-kumars-projects.vercel.app',  // No trailing slash
+  ],
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 };
+app.use(cors(corsOptions));
+
 app.use(express.json()); 
 
 app.use('/api/users', userRoutes);
