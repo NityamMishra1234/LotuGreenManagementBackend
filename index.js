@@ -17,12 +17,11 @@ const app = express();
 connectDB();
 
 
-app.use(cors({
-  origin: '*',
+const corsOptions = {
+  origin: ['https://lotus-green-management-31lb.vercel.app', 'https://lotus-green-management-git-main-nityam-kumars-projects.vercel.app/', 'https://lotus-green-management-r9d40hee9-nityam-kumars-projects.vercel.app/'], // Add more domains here
   methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
-
+  allowedHeaders: ['Content-Type', 'Authorization'],
+};
 app.use(express.json()); 
 
 app.use('/api/users', userRoutes);
