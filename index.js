@@ -23,6 +23,7 @@ const corsOptions = {
     'https://lotus-green-management-git-main-nityam-kumars-projects.vercel.app',  // No trailing slash
     'https://lotus-green-management-r9d40hee9-nityam-kumars-projects.vercel.app', 
     'https://lotus-green-management.vercel.app'
+    "https://lotus-green-management-ldns-git-main-nityam-kumars-projects.vercel.app/"
     // No trailing slash
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
